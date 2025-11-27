@@ -10,6 +10,6 @@ When you're ready, delete this note and make the vault your own.
 
 
 recent reflections:
-- [[Research page\|Research page]]
+- [[01-Research/Research page\|Research page]]
 - ...
 
