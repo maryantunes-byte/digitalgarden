@@ -1,13 +1,86 @@
-body {
-    /***
-      ADD YOUR CUSTOM STYLING HERE. (INSIDE THE body {...} section.)
-      IT WILL TAKE PRECEDENCE OVER THE STYLING IN THE STYLE.CSS FILE.
-   ***/
-    background-color: rgb(69, 40, 40);
-    //  .content {
-        font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    //  }
-    //  h1 {
-    //   color: black;
-    //  }
+/* ---------------------------------------------------------
+   CUSTOM OVERRIDES
+   Safe SCSS overrides that work with all Obsidian-based themes
+--------------------------------------------------------- */
+
+/* ---------------------------------------------------------
+   1. VARIABLE OVERRIDES (highest priority)
+--------------------------------------------------------- */
+
+:root,
+.theme-dark,
+.theme-light,
+body,
+.app-container {
+    --background-primary: #C1FDE6 !important;     /* Change this */
+    --background-secondary: #C4E6FF !important;   /* Change this */
 }
+
+/* ---------------------------------------------------------
+   2. HARD BACKGROUND OVERRIDES
+   Needed because some themes do not rely fully on variables
+--------------------------------------------------------- */
+
+body,
+.app-container,
+.workspace,
+.workspace-split,
+.workspace-leaf,
+.view-content,
+.mod-root,
+.document,
+.markdown-preview-view,
+.cm-editor {
+    background-color: var(--background-primary) !important;
+}
+
+.workspace-tabs,
+.nav-files-container,
+.side-dock,
+.status-bar,
+.titlebar {
+    background-color: var(--background-secondary) !important;
+}
+
+/* ---------------------------------------------------------
+   3. FONT OVERRIDE — apply globally
+--------------------------------------------------------- */
+
+body,
+.app-container,
+input,
+textarea,
+button,
+select,
+.markdown-preview-view,
+.cm-editor,
+.cm-content,
+* {
+    font-family: "Arial Narrow", Arial, sans-serif !important;
+}
+
+/* ---------------------------------------------------------
+   4. OPTIONAL — Tweak text color (uncomment if needed)
+--------------------------------------------------------- */
+
+:root,
+.theme-dark,
+.theme-light {
+    --text-normal: #1d1d1d !important;
+    --text-accent: #1f2e39 !important;
+}
+
+/* ---------------------------------------------------------
+   H1 COLOR OVERRIDE
+--------------------------------------------------------- */
+
+h1,
+.markdown-preview-view h1,
+.cm-header-1 {
+    color: #1D1D1D !important;
+}
+
+
+/* ---------------------------------------------------------
+   END OF CUSTOM OVERRIDES
+--------------------------------------------------------- */
